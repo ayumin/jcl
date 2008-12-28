@@ -3,22 +3,14 @@ require 'ext/string'
 module Jcl
   
   CHARSET_NAME    = '[A-Z0-9@#]+'
-  # JOB文にマッチする正規表現
   IDENT_JOB       = %r|^//(#{CHARSET_NAME})\s+JOB\s+(\S+)\s*$|
-  # EXEC文にマッチする正規表現
   IDENT_EXEC      = %r|^//(#{CHARSET_NAME})\s+EXEC\s+(\S+)\s*$|
-  # DD名のあるDD文にマッチする正規表現
   IDENT_DD        = %r|^//(#{CHARSET_NAME})\s+DD\s+(\S+)\s*$|
-  # DD名の無いDD文にマッチする正規表現
   IDENT_CONCAT    = %r|^//\s+DD\s+(\S+)\s*$|
-  # 継続パラメータにマッチする正規表現
   IDENT_PARAM     = %r|^//\s+(\S+)\s*$|
-  # コメント行にマッチする正規表現
   IDENT_COMMENT   = %r|^//\*|
-  # 区切り行にマッチする正規表現
   IDENT_PERTITION = %r|^/\*|
 
-  # JCLの書法に従ったスクリプトファイルをロードします。
   #
   # By default, +camelize+ converts strings to UpperCamelCase. If the argument to +camelize+
   # is set to <tt>:lower</tt> then +camelize+ produces lowerCamelCase.
