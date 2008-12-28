@@ -1,0 +1,3 @@
+= JCL - Job Control Language
+JCLモジュールは、メインフレームで使用されるジョブ制御言語をRubyで記述
+することができます。
