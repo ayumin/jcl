@@ -11,18 +11,6 @@ module Jcl
   IDENT_COMMENT   = %r|^//\*|
   IDENT_PERTITION = %r|^/\*|
 
-  #
-  # By default, +camelize+ converts strings to UpperCamelCase. If the argument to +camelize+
-  # is set to <tt>:lower</tt> then +camelize+ produces lowerCamelCase.
-  #
-  # +camelize+ will also convert '/' to '::' which is useful for converting paths to namespaces.
-  #
-  # Examples:
-  #   "active_record".camelize                # => "ActiveRecord"
-  #   "active_record".camelize(:lower)        # => "activeRecord"
-  #   "active_record/errors".camelize         # => "ActiveRecord::Errors"
-  #   "active_record/errors".camelize(:lower) # => "activeRecord::Errors"
-
   def self.load_file filename
     current_job =  current_step  = current_dd = nil
 
