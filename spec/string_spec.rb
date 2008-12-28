@@ -1,7 +1,4 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-
-require 'string'
+require 'ext/string'
 
 describe String do
   it "should convert single param-set that has nil value" do
