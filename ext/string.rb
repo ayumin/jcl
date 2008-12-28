@@ -6,17 +6,13 @@ class String
     end
   end
 
-  # パラメータ文字列をハッシュに変換します。
-  #
-  # ただし <tt>VOL=SER</tt> キーワードおよび <tt>VOL=AFF</tt> キーワードは
-  # それぞれ +VOL_SER+、+VOL_AFF+の名前でハッシュに格納されます。
-  #
   # Example:
   #  "ruby".parametize                    # => {'ruby' => nil}
   #  "ruby=fun".parametize                # => {'ruby' => 'fun'}
   #  "ruby=fun,perl=good".parametize      # => {'ruby' => 'fun', 'perl' => 'good'}
   #  "VOL=SER=foo,VOL=AFF=bar".parametize # => {'VOL_SER' => 'foo', 'VOL_AFF' => 'bar'}
   #
+
   def parametize
     str = ""
     res ={}
