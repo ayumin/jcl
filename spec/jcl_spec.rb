@@ -1,4 +1,4 @@
-require 'jcl'
+require 'lib/jcl'
 
 describe Jcl::Job, "aaa" do
   it "case 1" do
